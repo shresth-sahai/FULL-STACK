@@ -44,6 +44,89 @@
 
 
 
+// In JavaScript,
+//   almost "everything" is an object.
+//  All JavaScript values, except primitives, are objects.
+
+//let x = new String();
+
+// rest parameter
+let x = abc(2, 3, 3, 4, 4, 4, 44, 4, 4, 4, 4, 4, 4, 4, 4);
+function abc(...args) {
+    let s = 0;
+    
+    for (let i of args) {
+        s += i;
+    }
+return s;
+}
+//console.log(x);
+
+
+// function mul(a, b) {
+//     return a * b;
+// }
+// window.mul(2, 3);
+// mul(2, 3); //***** */ browser
+//'' == ""
+// console.log(null === undefined) // false 
+// console.log(null == undefined)  // true // special case   
+// console.log(null == 0) //false  //special case 
+// console.log(null < 0) // null -> 0 false
+// console.log(null > 0) // false 
+// console.log(null <= 0) // true 
+// console.log(null >= 0) // true 
+// console.log(undefined == 0) //false
+// console.log(undefined < 0) // false 
+// console.log(undefined > 0)//false
+// console.log(undefined <= 0)// false 
+// console.log(undefined >= 0) // false 
+// undefined --> NAN
+
+
+
+// const obj = {
+//   a: 1,
+//   b: this.a + 1,
+//   c: () => this.a + 1,
+//   d() {
+//     return this.a + 1
+//   },
+//   e() {
+//     return (() => this.a + 1)() // IIFE 
+//   }
+// }
+// console.log(obj.b) //exception->when the definition of object is completed then only we can use this
+// console.log(obj.c())// arrow function there is no definition of this 
+// console.log(obj.d())// 2
+// console.log(obj.e())// 2 
+
+
+// this --> refers to the object 
+
+//console.log(this)// --> global object 
+
+
+
+
+console.log([0] == '')
+console.log([0] == 0)
+
+
+// ternary operator 
+const obj = {
+  a: 1,
+  b() {
+    return this.a
+  }
+}
+console.log(obj.b())
+console.log((true ? obj.b : a)())
+console.log((true, obj.b)())
+console.log((3, obj['b'])())
+console.log((obj.b)())
+console.log((obj.c = obj.b)())
+
 
 
 
