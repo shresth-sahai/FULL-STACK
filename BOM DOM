@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form1">
+     Enter Name : <input type="text" name="name"/>
+    <input type="button" onclick="print()" value="print name"/>
+    </form>
+</body>
+<script>
+   function print(){
+       var name=document.form1.name.value;
+      alert("Hello",name)
+
+
+   } 
+</script>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="1" class="h1 class">
+        hi
+    </h1>
+    <p class="h1 class" id="2">
+        Hello 
+    </p>
+</body>
+<script>
+   document.getElementById("1").innerHTML="INNER_HTML"
+   
+</script>
+</html>
+
+
+
+<html>
+
+<body>
+    <h2>JavaScript Navigator Object</h2>
+    <script>
+        document.writeln("<br/>navigator.appCodeName: " + navigator.appCodeName);
+        document.writeln("<br/>navigator.appName: " + navigator.appName);
+        document.writeln("<br/>navigator.appVersion: " + navigator.appVersion);
+        document.writeln("<br/>navigator.cookieEnabled: " + navigator.cookieEnabled);
+        document.writeln("<br/>navigator.language: " + navigator.language);
+        document.writeln("<br/>navigator.userAgent: " + navigator.userAgent);
+        document.writeln("<br/>navigator.platform: " + navigator.platform);
+        document.writeln("<br/>navigator.onLine: " + navigator.onLine);
+          document.writeln("<br/>Sv: " + navigator.onLine);
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+//-- > BOM 
+ //Browser  Object Model ---> used to interact with the browser
+
+ // default object --> window
+
+ //window.alert("hello ");
+
+ // window --> document , history , screen , navigator , location
+ // represents the window (browser's object )
+
+ // Methods inside window--> alert(), confirm(), prompt(), open(), close(),setTimeOut(
+    
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+//     <div>
+//         <input type="button" value="click" onclick="msg()" />
+//     </div>
+
+// </body>
+// <script>
+//     function msg(){
+//       alert("Hello Window")
+//     }
+// </script>
+// </html>
+
+// History --> array [urls] visited by the user 
+// forward()//back()// go()
+// 
+
+// navigator --> gives info browser 
+//--> navigator.appCodeName, appName, appVersion
+// --> screen --> browser screen
+
+// DOM---> whole html (root element)
+
+window.document().getElementById()
+document.getElementById()
+document.getElementsByClassName()
+document.getElementsByName()
+
+
+
+
+
+
+
+
+
+
+
