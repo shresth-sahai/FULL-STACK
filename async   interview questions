@@ -1,0 +1,147 @@
+// api --> blackbox --> ip --> op
+//Covid --> 15 days ---> end points(api end points)-->public 
+// fetch / axios 
+
+// function getData() {
+//     const url=''
+//   //  return fetch(url).then(response)
+//    // const response = await fetch(url);
+// }
+
+
+
+
+// async function foo() {
+    
+//     let promise = new Promise((resolve, reject) => {
+//         setTimeout(() => resolve("done"), 1000);
+
+//     });
+//     let result = await promise;
+//     console.log(result);
+// }
+
+// foo();
+// console.log("This will print first");
+
+
+// async function foo() {
+//     console.log("Hello");
+//   return 42;
+// }
+// foo().then(console.log); hello 42
+
+
+// function delay(ms) {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
+
+// async function foo() {
+//   console.log('Start'); // sync
+//   await delay(1000);   // async 
+//   console.log('End');
+// }
+
+// foo();
+// console.log('After calling foo');
+
+
+// async function foo() {
+//   console.log('A');
+//   await Promise.resolve();
+//   console.log('B');
+// }
+
+// foo();
+// console.log('C');  // A C B
+
+// async function foo() {
+//   console.log('Start');
+//   await new Promise(resolve => setTimeout(resolve, 1000));
+//   console.log('End');
+// }
+
+// foo(); // start start  console.log('After calling foo twice');
+// foo(); // 
+// console.log('After calling foo twice');
+
+
+
+// function a() {
+//     console.log("1");
+// }function a() {
+//     console.log("11");
+// }function a() {
+//     console.log("111");
+// }
+// a();
+
+
+// function delay(ms) {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
+// async function foo() {
+//   console.log('Start');
+//   await delay(1000);
+//   console.log('Middle');
+//   await delay(500);
+//   console.log('End');
+// }
+// foo();
+// console.log('After calling foo'); //start , After calling foo, mid, end 
+
+
+
+// async function foo() {
+//   console.log('A');
+//   await new Promise(resolve => setTimeout(resolve, 1000));
+//   console.log('B');
+// }
+
+// async function bar() {
+//   console.log('X');
+//   await foo();
+//   console.log('Y');
+// }
+
+// bar();
+// console.log('Z');
+
+
+// async function foo() {
+//   console.log('1');
+//   await new Promise(resolve => setTimeout(resolve, 100));
+//   console.log('2');
+//   return '3';
+// }
+
+// async function bar() {
+//   console.log('4');
+//   const result = await foo();
+//   console.log(result);
+// }
+
+// bar();
+// console.log('5');
+
+
+// function delay(ms) {
+//   return new Promise(resolve => setTimeout(resolve, ms));
+// }
+
+// async function foo() {
+//   console.log('Start');
+//   await delay(1000);
+//   console.log('After 1 second');
+// }
+
+// async function bar() {
+//   console.log('Before foo');
+//   await foo();
+//   console.log('After foo');
+// }
+
+// bar();
+// console.log('Outside bar');
+
+
