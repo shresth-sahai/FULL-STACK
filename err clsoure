@@ -1,0 +1,190 @@
+// --> fetch -> api response --> happy path ---> exception /err
+//eg--> 1/0 
+// err object in js 
+
+// evalerr--> eval()--> 
+// internal err--> js engine
+//rangeerr--> using apart from range of vals
+// refernceerr()-->
+// type err()-->
+
+//console.log(2 == '2');
+
+//global context --> 
+
+//call --> used to call a function with a specified this value and args provided indivisually
+// function g()
+// {
+//     console.log("hello ", this.name + "!");
+// }
+// var p = { name: "A" };
+// g.call(p);
+// apply --> + array of arguments
+
+// function greet(greeting) {
+//     console.log(greeting + "," + this.name);
+// }
+// var p = { name: "A" };
+// greet.apply(p, ["Hello"]); // Hello A
+
+// function greet(greeting,value) {
+//     console.log(greeting + "," + this.name+ value);
+// }
+// var p = { name: "A" };
+// var b = greet.apply(p, ["Hello", "2"]);
+
+// strict mode--->
+
+// function f(a, a, c) {
+//     return a + a + c;
+// }
+
+// f(1, 2, 3);// 6 
+
+// split()--> 
+// const h = "i am learning js"
+// arr = h.split(" ");
+// console.log(arr.length);
+
+//closure--> concept -> 
+
+// function outer() {
+//     let ov = "i am outer function";
+//     function inner() {
+//         console.log(ov);
+//     }
+//     return inner;
+// }
+// let inner = outer();
+// inner(); // i m outer function
+
+// function c() {
+//     let count = 0;
+//     return function () {
+//         count++;
+//         console.log(count);
+//     }
+// }
+// let cc = c();
+// cc(); // 1
+// cc(); // 2
+
+function dosomething(callback) {
+    let res = 1;
+    callback(res);
+}
+function callbackfunction(value) {
+    console.log(value);
+}
+dosomething(callbackfunction);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScipt Events</title>
+</head>
+<body>
+    
+<!-- <h1> ERR HANDLING </h1> -->
+    <!-- <script >
+     try{
+         var a=["32","34","5","45"];
+         document.write(a);
+         document.write(b);
+     }
+     catch(e){
+         document.write("Error",e.message);
+         document.write("Error", e);
+     }
+     
+    </script> -->
+    <!-- <script>
+        try{
+            var a=2;
+            if(a==1)
+        document.write("ok");
+            
+        }
+        catch(e){
+            document.write(e.message);
+        }
+        finally{
+            document.write("value of a"," ", a);
+        }
+    </script> -->
+   <!-- <script>
+       var address={
+           company:"CB", city:"Delhi",state:"DELHI",fullAddress:function(){
+               return this.company+" "+this.city;
+
+           }
+       };
+       var fetch=address.fullAddress();
+       document.write(fetch);
+
+   </script> -->
+   <!-- <script>
+       var web="js";
+       function webb(){
+         document.write(this.web);
+       }
+       webb();
+   </script> -->
+   <!-- <script>
+       var e_address={
+           fullAddress: function() {
+               return this.company + " " + this.city;
+           }
+       }
+       var address = {
+            company: "CB", city: "Delhi", state: "DELHI"
+        }
+      
+        document.writeln(e_address.fullAddress.call(address));
+
+   </script> -->
+
+
+   <!-- <script>
+            x = 10;
+            console.log(x)
+       "use strict"
+       x=10;
+       console.log(x) // refernce err
+
+       console.log(sum(10,20));
+       function sum(a,a){
+           "use strict"
+           return a+a;  // duplicate parameters
+       }
+
+       "use strict"
+       function sum(a,a,b){
+           return a+a+c;
+       }
+
+        function a(){
+           return this;
+       }
+       console.log(a()); 
+   </script> -->
+   <!-- <script>
+   var result;
+       function sum(a,b){
+return a+b;
+       }
+      eval("result=sum(10, 100);");
+       document.writeln(result)
+   </script> -->
+<!-- </script> 
+<script>
+   var result=0;
+
+ document.writeln(eval("if(result==1){'0'} else{'1'};"))
+   </script> 
+
+    
+</body>
+</html> -->
