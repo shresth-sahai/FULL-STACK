@@ -1,0 +1,241 @@
+make a button on clicking it should add new element showing Hello world
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser</title>
+<style>
+    body{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .container{
+        margin:50px;
+        color: rgb(35, 176, 176);
+        
+
+    }
+    button{
+        margin: 5%;
+    }
+</style>
+</head>
+
+<body>
+<div class="container" >
+    <h1> JS Add Element </h1>
+    <button  id="addElemid" onclick="addElement()">
+        Add Element </button>
+        <div id="elementContainer"> </div>
+</div>
+<script>
+function addElement(){
+
+    const elementContainer=document.getElementById("elementContainer");
+    const newElement=document.createElement('p');
+    newElement.textContent="HI Appending";
+    elementContainer.appendChild(newElement);
+}
+</script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector vs querySelectorAll</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin: 50px;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>querySelector vs querySelectorAll Example</h1>
+        <button onclick="highlightFirst()">Highlight First Div</button>
+        <button onclick="highlightAll()">Highlight All Divs</button>
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+    </div>
+    <script>
+        function highlightFirst() {
+            const firstDiv = document.querySelector('.box');
+            if (firstDiv) {
+                firstDiv.classList.add('highlight');
+            }
+        }
+
+        function highlightAll() {
+            const allDivs = document.querySelectorAll('.box');
+            allDivs.forEach(div => div.classList.add('highlight'));
+        }
+    </script>
+</body>
+
+</html>//queryselector--->return first element 
+
+//queryselectorAll()-->returns allthe elemest--> [nodelist]
+
+//const a = [1, 2, 3];
+//var 
+// for (var i = 0; i < 5; i++){
+//     console.log(i);
+// }
+// for (let i = 0; i < 5; i++){
+//     console.log(i);
+// }
+
+// for (let i = 0; i < 5; i++){
+//    setTimeout(()=> console.log(i),0);
+// }
+
+
+
+// for (var i = 0; i < 5; i++){
+//     setTimeout(()=> console.log(i),0);
+// }
+// 0 1 2 3 4 5 
+
+// const numbers = [1, 2, 3, 4, 5]
+
+// numbers.forEach(function (number) {
+//     if (number == 1) return;
+//     else console.log(number);
+// })
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .balls {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .ball {
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            border: none;
+            background-color: red !important;
+        }
+        .blue{
+            background-color: brown ;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Q. Make all the balls blue  -->
+
+    <div class="balls">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+    <script>
+    
+        const allballs=document.querySelectorAll('.ball');
+        allballs.forEach(ball=>{
+            ball.classList.add('blue')  ;
+        });
+        </script>
+        </body>
+        
+        </html>
+
+
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <button id="all">Remove All</button>
+    <ul>
+        <li>
+            <p>Task - 1</p>
+            <button>delete</button>
+        </li>
+        <li>
+            <p>Task - 2</p>
+            <button>delete</button>
+        </li>
+        <li>
+            <p>Task - 3</p>
+            <button>delete</button>
+        </li>
+        <li>
+            <p>Task - 4</p>
+            <button>delete</button>
+        </li>
+    </ul>
+    <script>
+         </script>
+    </body>
+    
+    </html><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove Example</title>
+    <style>
+        .item {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="item">
+            <div class="item1">Item 1 <button onclick="removeItem(this)">Remove</button></div>
+            <div class="item2">Item 2 <button onclick="removeItem(this)">Remove</button></div>
+            <div class="item3">Item 3 <button onclick="removeItem(this)">Remove</button></div>
+        </div>
+       
+    </div>
+<script>
+    function removeItem(button){
+      var item =button.parentElement;//get the parent
+    item.parentElement.removeChild(item);
+// remove parent div elem from its parent 
+    }
+</script>
+    </body>
+    </html>
