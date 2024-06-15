@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>
+    Hi
+  </h1>
+  <h2> Example </h2>
+  <div id="div1" style="font-size: 20px; background-color: aqua;">
+    this is my first div
+  </div>
+  <div id="div2" style="font-size: 20px; background-color: rgb(187, 0, 255);">
+    this is my first div
+  </div>
+  <br>
+  <button onclick="fun()">
+    Click Me 
+  </button>
+  <p id="p"> </p>
+  <p id="p1"> </p>
+  <script>
+    function fun(){
+      var val=document.getElementById("div1").getAttribute("style");
+      document.getElementById("p").innerHTML=val;
+      
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>
+    Hi
+  </h1>
+  <h2> Example </h2>
+  <div id="div1" style="font-size: 20px; background-color: aqua;">
+    this is my first div
+  </div>
+  <div id="div2" style="font-size: 20px; background-color: rgb(187, 0, 255);">
+    this is my first div
+  </div>
+  <br>
+  <button onclick="fun()" id="btn">
+    Click Me 
+  </button>
+  <p id="p"> </p>
+  <p id="p1"> </p>
+  <script>
+    function fun(){
+     document.getElementById("div1").style.display="none";
+     document.getElementById("p").style.display="none";
+
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>   
+<html>  
+<head>   
+<title> reset() method </title>  
+</head>  
+<body style = "text-align: center;">  
+<div style = "background: pink;">  
+  <font color = "red" size = "6px">  
+    <b> Example of the reset() method </b>  
+  </font>  
+ </div>  
+    <div style = "background: lightblue;">  
+    <form id = "myForm" action = "#" style = "font-size: 20px;" >  
+    <p> First Name: <input type = "text" id = "fname" /></p>  
+    <p> Last Name: <input type = "text" id = "lname" /></p>  
+    <p> E-mail Id:   <input type = "email" id = "email" /></p>  
+    <p> Age:         <input type = "number" id = "age" /></p>  
+    <input type = "submit">  
+    <input type = "button" value = "Reset data" onClick = "fun()"/>  
+    </form>  
+    </div>  
+<script>  
+ function fun(){  
+   document.getElementById("myForm").reset();  
+ }   
+</script>  
+  
+</body>  
+</html>  
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> Welome</h1>
+  <script>
+    function get(){
+      let fname="ABC",
+      lname="XYZ",
+      age='23'
+
+      return {fname,lname,age};
+    }
+    let {fname,lname,age}=get();
+    document.write(fname);
+  </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1> Welome</h1>
+  <script>
+    var str="Hi GM GN";
+    var arr=str.split(" ",4);
+    document.write(arr)
+  </script>
+</body>
+</html>
