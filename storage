@@ -1,0 +1,15 @@
+// localstorage--> helps us to storage data in browser  persistently 
+
+//web storage api layer --> expire synchronous , K-V , 4mb storage 
+// localStorage.setItem('user', 1);
+
+//session storage ---> 1 session 
+
+
+// cookies--> small pieces-->HTTP req--> user exp customiztion 4 kb (auth token)
+
+
+
+// indexeddb--> api large amt of data (capacity depends browser)
+
+//cache storage-->  hot data (most frequenlty viewed )
