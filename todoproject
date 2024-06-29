@@ -92,3 +92,60 @@ small {
   margin-top: 3rem;
   text-align: center;
 }
+
+
+
+const form = document.getElementById('form');
+const input = document.getElementById('input');
+const todoUl = document.getElementById('todos');
+
+const todos = JSON.parse
+    (localStorage.getItem('todos'));
+
+if (todos) {
+    todos.foreach(todo => addTodo(todo))
+    }
+
+function addTodo(todo) {
+    //let todoText = todo.value;
+
+    if (todoText) {
+        todoText = todo.value;
+    }
+ if (todoText) {
+     todoText = todo.value;
+     const todoElem = document.createElement('li');
+     if (todo && todo.completed) {
+         todoElem.classList.add('completed');
+     }
+     todoElem.innerHTML=todoText
+ }
+    todoElem.addEventListener('click', () => {
+        todoElem.classList.toggle('completed');
+    update()
+    })
+
+    todoElem.addEventListener('contextmenu', (e) => {
+        e.preventDefault()
+        todoElem.remove();
+        update()
+    })
+
+    todoUl.appendChild(todoElem);
+    input.value = '';
+update()
+}
+    
+function update() {
+    todoElem = document.querySelectorAll('li');
+    const todos = [];
+    todoElem.foreach(todo => {
+        todos.push({
+            text: todoElem.innerText,
+            completed:todoElem.classList.contains('completed')
+        })
+    })
+
+    localStorage.setItem('todos', JSON.stringify(todos));
+    
+}
