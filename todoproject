@@ -114,7 +114,7 @@ function addTodo(todo) {
     let todoText = input.value; 
     // initially null --> 
 
-    if (todoText) {
+    if (todo) {
         todoText = todo.value;
     }
  if (todoText) {
