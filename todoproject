@@ -104,10 +104,15 @@ const todos = JSON.parse
 
 if (todos) {
     todos.foreach(todo => addTodo(todo))
-    }
-
+}
+    
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addTodo();
+})
 function addTodo(todo) {
-    //let todoText = todo.value;
+    let todoText = input.value; 
+    // initially null --> 
 
     if (todoText) {
         todoText = todo.value;
@@ -133,13 +138,13 @@ function addTodo(todo) {
 
     todoUl.appendChild(todoElem);
     input.value = '';
-update()
+    update()
 }
     
 function update() {
     todoElem = document.querySelectorAll('li');
     const todos = [];
-    todoElem.foreach(todo => {
+    todoElem.foreach(todoElem => {
         todos.push({
             text: todoElem.innerText,
             completed:todoElem.classList.contains('completed')
@@ -147,5 +152,4 @@ function update() {
     })
 
     localStorage.setItem('todos', JSON.stringify(todos));
-    
 }
