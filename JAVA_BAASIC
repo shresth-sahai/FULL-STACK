@@ -1,0 +1,38 @@
+package org.example;
+
+
+
+public class Main {
+    int a2; //instance varible 
+
+    public static void main(String[] args) {
+
+        System.out.println("Hello world!");
+        // variable-> container-> value
+        // datatype variable name
+        //System.out.println(x);
+//java is statically  typed lang
+        //  strongly typed -->
+        // primitive -> char(2byes 16 bit),byte(1byte 8 bit) ,short(,int,long,float, double,boolean
+        // non p--> class , interafce, array ,string,enum
+        // char 2 byte  16 bit , default -> NULL
+        // byte 1 byte 8 bit , default -> 0
+        // short 2 bytes , 0
+        // int 4bytes , -> 0
+        //long ->8 bytes  , 0
+        //boolean -> 1 byte ,  True
+        int  x=1;
+        boolean a=true;
+        boolean b;
+        int a1;
+        System.out.println(b);
+        System.out.println(a1);
+        System.out.println(instance.a2);
+
+    }
+}
+// public class--> only  1 -> java file
+// kinds of varibles ->
+//1  instance /member var--> its a variable of the class ->
+//2 local -> function associated var, deleted once function is completed; main, block ,constructor
+//3 static-> 1 copy
