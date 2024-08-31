@@ -1,0 +1,249 @@
+// What is the difference between 'Pass by Value'
+// and 'Pass by Reference'?
+
+// function a(b) {
+//     console.log(b)
+// }
+// a({ "1": 2})
+
+// map vs filter 
+--> arrays 
+map -> trnasform each elem and makes a new array 
+filter -> creates a new array only when some condition is satisfied 
+
+// map() forEach()
+map()-> returns a new array, with transformed value 
+    -> map can be used other methods filter etc 
+
+pure and impure functions ->
+    pure -> local state does not gets changed
+    same output for the same args [passed]
+    eg function a(name){
+        return `hello ${name}`
+    }
+    console.log(a("ABC"))
+
+   impure -> value returned will be inconsistent output for same 
+   args
+   let message="good morning1";
+   function a1(name){
+        return `hello ${name},${message}`
+    }
+    console.log(a1("ABC"))
+
+
+for in / for of 
+-> for in -> enumerable prop -> keys of object 
+-> for of -> values 
+
+
+call()->function call,comma sep args 
+apply()->function call,array
+bind()->function call,returns a new funciton with the given value and args which can be invoked later 
+
+
+ES6 -> features -> Arrow functions let const destructuing spread etc
+Weak Map 
+
+Spread Operator -> let x=[1,2] let y=[3,4] let z=[...x,...y]
+let a =[...x]
+function ar(a1,b1){
+    console.log(a1,b1);
+}
+ar(...a)
+
+rest operator ->when we don't know the no of args 
+function args(...args){
+    console.log(args)
+}
+args(1,2,3,4,4,5,5,5,5,5)
+
+
+ways to create object in JS 
+
+-> let user={name:'',city:''} object literal 
+let user =new obejct (); object constructor
+user.name='';
+
+let a={name:''}
+let obj1 =Object.create(a);
+
+Object.assign -> multiple objects -> we create a new one 
+
+Objects.keys -> retunr keys 
+Object.values -> values 
+Object.entries -> [key-value]
+
+Object.freeze()-> object immutable 
+let data={a:10}
+Object.freeze(data);
+data.a=20;
+data.c=30;
+console.log(data)-> 
+same a:10
+
+Object.seal()-> prevent adding new props but we can modify exisiting 
+let data={a:12};
+Object.seal(data);
+data.a=20;
+data.c=30;
+OP-> {a:20}
+
+polyfill -> 
+prototype- > add fucntionaliry to functions in a later stage 
+
+function Student(){
+    this.name="Sa",
+    this.exp=10
+}
+Student.prototype.company="XYZ"
+let st1=new Student();
+st1.exp=11;
+let st2=new Student();
+st2.exp=111;
+console.log(st1,st2);
+
+IIFE ->
+
+(function (){
+    console.log("123)
+})()
+
+
+CORS-> cross origin resource sharing 
+security features -> helps access resources of one domain to another 
+
+non primitive data types- > 
+Object DATE array
+
+->      3+3+"7" -> 67
+
+closure in js->
+funciton o(){
+    var a=10;
+    funciton i(){
+        console.log(a)
+    }
+    retunr i;
+}
+var c=o();
+c();
+
+function Print(){
+console.log("Print method");
+}
+function Hello(Print){
+    Print();
+console.log("Hello method");
+}
+Hello(Print);
+
+
+HOC-> input (function)->op -> function
+
+indexedDB ->
+
+Sessionstorage 
+
+Hoisting -> 
+
+
+let 
+const 
+var 
+
+
+const a=1<2<3
+const b=1>2>3
+console.log(a,b)
+
+
+find()
+funciton find(){
+    let arr=[{id:1,name:"S"},{id:2,name:"K"}]
+    let data=arr.find(x=>x.id==2)
+    console.log(data)
+}
+find()
+funciton find(){
+    let arr=[{id:1,name:"S"},{id:2,name:"K"}]
+    let data=arr.findIndex(x=>x.id==2)
+    console.log(data)
+}
+find()
+
+tree shaking ->optimzing concept
+
+
+console.log("Start");
+setTimeout(() => {
+ console.log("Timeout");
+});
+Promise.resolve().then(() => console.log("Promise"));
+console.log("End");
+
+const p = { k: 1, l: 2 };
+const q = { k: 1, l: 2 };
+let isEqual = p==q;
+let isStartEqual = p=== q;
+console.log(isEqual, isStartEqual)
+
+
+a) 2+2 = ?
+b) "2"+"2" = ?
+c) 2+2-2 = ?
+d) "2"+"2" -"2" = ? 20 
+
+var a="javascript"
+a[1]="v"
+console.log(a)
+let a="javascript"
+a[1]="v"
+console.log(a)
+*strings are immutable 
+
+
+var x=10;
+function foo(){
+var x = 5;
+console.log(x)
+}
+foo();
+console.log(x)
+
+
+function x(){
+ for(var i=1;i<=5;i++){
+ setTimeout(()=>{
+ console.log(i)
+ },i*1000)
+ }
+
+}
+x(); use let to print no in increasing order 
+
+
+function x(){
+ let a = 10;
+ function d(){
+ console.log(a);
+ }
+ a = 500;
+ return d;
+}
+var z = x();
+z();
+
+
+getData1()
+getData();
+function getData1(){
+ console.log("getData11")
+}
+var getData = () => {
+ console.log("Hello")
+}
+
+
+a(1);
+const a=(b)=> console.log(b);
